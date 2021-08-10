@@ -7,7 +7,19 @@
       rel="stylesheet"
     /> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
   <link href="css/styles.css" rel="stylesheet" />
+  <script>
+    function myFunction() {
+      const navbar = document.querySelector(".hamburger-wrapper");
+      const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+      if (navbar.style.display === 'flex') {
+          navbar.style.display = 'none';
+      } else {
+        navbar.setAttribute('style','display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;');
+      }
+    }
+  </script>
   <title>Food Order</title>
 </head>
 
@@ -16,126 +28,141 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container flex">
-        <a href="/">
-          <h2 class="logo"><span>F</span>ood</h2>
-        </a>
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html" class="active">Find Food</a>
-            </li>
-            <li><a href="review.html">Review</a></li>
-            <li><a href="abouts.html">Abouts</a></li>
-          </ul>
-        </nav>
-        <div class="flex-buttons">
-          <div>
-            <span class="material-icons-outlined icon">
-              search
-              </span>
-            <input type="text" id="search" name="search" placeholder="search" />
-          </div>
-          <div class="cart">
-            <span class="badge">4</span>
-            <a href="cart.html" class="anchor-button">
-              <span class="material-icons-outlined">shopping_cart</span>
-            </a>
-          </div>
+        <a href="javascript:void(0);" class="hamburger-menu" onclick="myFunction()"><span
+          class="material-icons-outlined">menu</span></a>
+      </div>
+    </div>
+
+    <div class="container hamburger-wrapper">
+      <a href="/">
+        <h2 class="logo"><span>F</span>ood</h2>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="active">Find Food</a>
+          </li>
+          <li><a href="review.html">Review</a></li>
+          <li><a href="abouts.html">Abouts</a></li>
+        </ul>
+      </nav>
+      <div class="flex-buttons">
+        <div>
+          <span class="material-icons-outlined icon"> search </span>
+          <input type="text" id="search" name="search" placeholder="search" />
+        </div>
+        <div class="cart">
+          <span class="badge">4</span>
+          <a href="cart.html" class="anchor-button">
+            <span class="material-icons-outlined">shopping_cart</span>
+          </a>
         </div>
       </div>
     </div>
 
-    <section class="main-content container">
-      <div class="partition-A">
-        <h5>CHECKING THE PROXY! <i class="fa fa-leaf icon-gold"></i></h5>
-        <h1>Taste the Best that Surprise you</h1>
-        <p>
-          An effective advertising slogan it gives an accurate picture of what
-          your Fast Food Business is all about.
-        </p>
-        <p id="price-1">
-          &dollar;15.00<span id="price-2"><strike>&dollar;25.00</strike></span>
-        </p>
-        <div>
-          <button class="primary-button">Buy Now</button>
-          <button class="secondary-button">See Menu</button>
+      <section class="main-content container">
+        <div class="partition-A">
+          <h5>CHECKING THE PROXY! <i class="fa fa-leaf icon-gold"></i></h5>
+          <h1>Taste the Best that Surprise you</h1>
+          <p>
+            An effective advertising slogan it gives an accurate picture of what
+            your Fast Food Business is all about.
+          </p>
+          <p id="price-1">
+            &dollar;15.00<span id="price-2"><strike>&dollar;25.00</strike></span>
+          </p>
+          <div>
+            <button class="primary-button">Buy Now</button>
+            <button class="secondary-button">See Menu</button>
+          </div>
         </div>
-      </div>
-      <div class="partition-B">
-        <img src="images/hero-image.png" alt="hero-image" />
-      </div>
-    </section>
+        <div class="partition-B">
+          <img src="images/hero-image.png" alt="hero-image" />
+        </div>
+      </section>
 
-    <section class="main-content container">
-      <div class="card">
-        <img src="images/dish.png" />
-        <div class="card-text">
-          <p>Must Explain</p>
-          <p class="quad-heading">at first</p>
-          <p>&dollar;15.00</p>
-          <div class="reviews">
-            <p>2.5K</p>
-            <p>Reviews</p>
-            <p>4.5 <i class="fa fa-star" style="color: yellow"></i></p>
-            <div class="add-to-cart">
-              <a href="cart.html"><i class="fa fa-shopping-cart" style="color: white"></i></a>
+      <section class="main-content container">
+        <div class="card">
+          <img src="images/dish.png" />
+          <div class="card-text">
+            <p>Must Explain</p>
+            <p class="quad-heading">at first</p>
+            <p>&dollar;15.00</p>
+            <div class="reviews">
+              <p>2.5K</p>
+              <p>Reviews</p>
+              <p>
+                4.5
+                <span class="material-icons-outlined" style="font-size: inherit; color: yellow">star</span>
+              </p>
+              <div class="add-to-cart">
+                <a href="cart.html"><span class="material-icons-outlined" style="color: white">shopping_cart</span></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="images/dish.png" />
-        <div class="card-text">
-          <p>Must Explain</p>
-          <p class="quad-heading">at first</p>
-          <p>&dollar;25.00</p>
-          <div class="reviews">
-            <p>2.5K</p>
-            <p>Reviews</p>
-            <p>4.5 <i class="fa fa-star" style="color: yellow"></i></p>
-            <div class="add-to-cart">
-              <a href="cart.html"><i class="fa fa-shopping-cart" style="color: white"></i></a>
+        <div class="card">
+          <img src="images/dish.png" />
+          <div class="card-text">
+            <p>Must Explain</p>
+            <p class="quad-heading">at first</p>
+            <p>&dollar;25.00</p>
+            <div class="reviews">
+              <p>2.5K</p>
+              <p>Reviews</p>
+              <p>
+                4.5
+                <span class="material-icons-outlined" style="font-size: inherit; color: yellow">star</span>
+              </p>
+              <div class="add-to-cart">
+                <a href="cart.html"><span class="material-icons-outlined" style="color: white">shopping_cart</span></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="images/dish.png" />
-        <div class="card-text">
-          <p>Must Explain</p>
-          <p class="quad-heading">at first</p>
-          <p>&dollar;35.00</p>
-          <div class="reviews">
-            <p>2.5K</p>
-            <p>Reviews</p>
-            <p>4.5 <i class="fa fa-star" style="color: yellow"></i></p>
-            <div class="add-to-cart">
-              <a href="cart.html"><i class="fa fa-shopping-cart" style="color: white"></i></a>
+        <div class="card">
+          <img src="images/dish.png" />
+          <div class="card-text">
+            <p>Must Explain</p>
+            <p class="quad-heading">at first</p>
+            <p>&dollar;35.00</p>
+            <div class="reviews">
+              <p>2.5K</p>
+              <p>Reviews</p>
+              <p>
+                4.5
+                <span class="material-icons-outlined" style="font-size: inherit; color: yellow">star</span>
+              </p>
+              <div class="add-to-cart">
+                <a href="cart.html"><span class="material-icons-outlined" style="color: white">shopping_cart</span></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="images/dish.png" />
-        <div class="card-text">
-          <p>Must Explain</p>
-          <p class="quad-heading">at first</p>
-          <p>&dollar;15.00</p>
-          <div class="reviews">
-            <p>2.5K</p>
-            <p>Reviews</p>
-            <p>4.5 <i class="fa fa-star" style="color: yellow"></i></p>
-            <div class="add-to-cart">
-              <a href="cart.html"><i class="fa fa-shopping-cart" style="color: white"></i></a>
+        <div class="card">
+          <img src="images/dish.png" />
+          <div class="card-text">
+            <p>Must Explain</p>
+            <p class="quad-heading">at first</p>
+            <p>&dollar;15.00</p>
+            <div class="reviews">
+              <p>2.5K</p>
+              <p>Reviews</p>
+              <p>
+                4.5
+                <span class="material-icons-outlined" style="font-size: inherit; color: yellow">star</span>
+              </p>
+              <div class="add-to-cart">
+                <a href="cart.html"><span class="material-icons-outlined" style="color: white">shopping_cart</span></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 </body>
 
 </html>
