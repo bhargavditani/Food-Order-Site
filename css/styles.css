@@ -1,86 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 /* Basic Styling */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto';
-    color: whitesmoke;
-    line-height: 1.6;
-    background-color: #333;
-    background-image: url('../images/bg-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  font-family: "Roboto";
+  color: whitesmoke;
+  line-height: 1.6;
+  background-color: #333;
+  background-image: url("../images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
-h1, h2{
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
 }
 
 p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 /* Intermediate Styling */
 body .wrapper {
-    margin: 35px;
-    background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(2px);
-    border: 2px solid green;
-    border-radius: 10px;
+  margin: 35px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  border: 2px solid green;
+  border-radius: 10px;
 }
 
 .navbar {
-    height: 70px;
-    overflow: auto;
-    /* position: sticky; */
+  height: 70px;
+  overflow: auto;
+  /* position: sticky; */
 }
 .container {
-    height: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
+  height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
 }
 .navbar .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .logo {
-    color: #f38f0c;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 1.6;
-    margin: 0;
-    overflow: auto;
-  }
+  color: #f38f0c;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+  overflow: auto;
+}
 
 .logo span {
-    color: #c42844;
+  color: #c42844;
 }
 
 .navbar .hamburger-menu-items {
@@ -93,57 +94,57 @@ body .wrapper {
 }
 
 .navbar .hamburger-menu-items ul.navigation {
-    height: 100%;
-    overflow: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
 }
 
 .navbar .hamburger-menu-items ul.navigation li {
-    display: inline-block;
-    color: grey;
-    padding: 10px;
-    margin: 0 5px;
+  display: inline-block;
+  color: grey;
+  padding: 10px;
+  margin: 0 5px;
 }
 
 .navbar .hamburger-menu-items ul.navigation li a {
-    color: grey;
-    display: inline-block;
+  color: grey;
+  display: inline-block;
 }
 
 .navbar .hamburger-menu-items ul.navigation li a:hover {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 .navbar .hamburger-menu-items ul.navigation li a.active {
-    color: white;
+  color: white;
 }
 
 .navbar .hamburger-menu-items .flex-buttons {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    text-align: center;
-    overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  text-align: center;
+  overflow: auto;
 }
 
 .navbar .hamburger-menu-items .flex-buttons .inner-wrapper-search {
   position: relative;
 }
 
-.hamburger-menu-items .flex-buttons .inner-wrapper-search span.icon {
-    position: absolute;
-    top: 1.8px;
-    left: 1.8px;
-}
+/* .hamburger-menu-items .flex-buttons .inner-wrapper-search span.icon {
+  position: absolute;
+  top: 1.8px;
+  left: 1.8px;
+} */
 
 a.hamburger-menu {
   line-height: 0;
@@ -151,22 +152,43 @@ a.hamburger-menu {
   display: none;
 }
 
+#search-button {
+  color: white;
+  background-color: inherit;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  line-height: 0;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  left: 1.5px;
+  outline: none;
+}
+
+#search-button:hover {
+  line-height: 1;
+  background-color: #333;
+  border-radius: 2px solid white;
+}
+
 #search {
-    background-color: inherit;
-    color: white;
-    height: 28px;
-    border-radius: 12px;
-    border: 1px solid grey;
-    padding-left: 25px; 
-    font-size: 15px;
-    outline: none;
-    margin-right: 4px;
-    padding-bottom: 2px;
-    transition: all 0.3s linear;
+  background-color: inherit;
+  color: white;
+  height: 28px;
+  border-radius: 12px;
+  border: 1px solid grey;
+  padding-left: 25px;
+  font-size: 15px;
+  outline: none;
+  margin-right: 4px;
+  padding-bottom: 2px;
+  transition: all 0.3s linear;
 }
 
 input#search:placeholder {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 input#search:focus {
@@ -174,228 +196,229 @@ input#search:focus {
 }
 
 .anchor-button {
-    display: inline-block;
-    color: inherit;
-    background-color: inherit;
-    text-align: center;
-    line-height: 0;
-    padding-top: 1px;
+  display: inline-block;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  line-height: 0;
+  padding-top: 1px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .cart {
-    position: relative;
-    margin-left: 4px;
-    margin-right: 10px;
-    border: 1px solid ghostwhite;
-    border-radius: 5px;
-    line-height: 0;
+  position: relative;
+  margin-left: 4px;
+  margin-right: 10px;
+  border: 1px solid ghostwhite;
+  border-radius: 5px;
+  line-height: 0;
 }
 
 .badge {
-    position: absolute;
-    top: -10px;
-    right: -8px;
-    padding: 1px 5px 1px 5px;
-    border-radius: 50%;
-    background: red;
-    color: white;
-    line-height: 1;
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  padding: 1px 5px 1px 5px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  line-height: 1;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: auto;
+  margin: 2rem auto;
+  height: auto;
+}
 
-.main-content{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: nowrap;
-    overflow: auto;
-    margin: 2rem auto;
-    height: auto;
-  }
+.main-content .partition-A {
+  height: auto;
+  max-width: 50%;
+}
 
-  .main-content .partition-A{
-    height: auto;
-    max-width: 50%;
-  }
-  
+.partition-A h1 {
+  color: white;
+  text-align: left;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0.8rem auto;
+  font-weight: 800;
+}
 
-.partition-A h1{
-    color: white;
-    text-align: left;
-    font-size: 2rem;
-    line-height: 1.4;
-    margin: 0.8rem auto;
-    font-weight: 800;
-  }
-  
-.partition-A h5{
-    color: white;
-    background-color: #99a99d;
-    border-radius: 10px;
-    line-height: 1.4;
-    min-height: 1.6rem;
-    max-width: 200px;
-    overflow: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-right: auto;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-    text-align: center;
-    font-weight: 300;
-  }
-  
-  .partition-A h5 span{
-    color: gold;
-    line-height: 1.4;
-    font-size: 14px;
-  }
-  
-  .partition-A p{
-    color: #99a99d;
-    line-height: 1.4;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-    font-size: 0.9rem;
-    font-weight: 300;
-    text-align: justify;
-    margin: 1rem auto;
-  }
+.partition-A h5 {
+  color: white;
+  background-color: #99a99d;
+  border-radius: 10px;
+  line-height: 1.4;
+  min-height: 1.6rem;
+  max-width: 200px;
+  overflow: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: auto;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-weight: 300;
+}
 
-  .spacing-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 1rem auto 1rem 0;
-    line-height: 1.4;
-    max-width: 200px;
-    padding: 0 0.5rem 0 0;
-  }
+.partition-A h5 span {
+  color: gold;
+  line-height: 1.4;
+  font-size: 14px;
+}
 
-  #price-1 {
-    display: inline-block;
-    color: white;
-    text-align: left;
-    font-weight: 600;
-  }
-  
-  #price-2{
-    display: inline-block;
-    color: #99a99d;
-    text-align: right;
-    margin-right: 3rem;
-  }
-  
-  .primary-button{
-    color: white;
-    background-color: #c42844;
-    width: 80px;
-    min-height: 32px;
-    text-align: center;
-    border: none;
-    border-radius: 14px;
-    outline: none;
-    cursor: pointer;
-    box-shadow: 0px 1px 2px 0px white;
-  }
-  
-  .secondary-button{
-    color: white;
-    background-color: transparent;
-    width: 80px;
-    height: 32px;
-    text-align: center;
-    border: 1px solid #99a99d;
-    border-radius: 14px;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  .main-content .partition-B {
-    max-width: 50%;
-    height: auto;
-    text-align: center;
-    line-height: 0;
-    overflow: visible;
-  }
+.partition-A p {
+  color: #99a99d;
+  line-height: 1.4;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: justify;
+  margin: 1rem auto;
+}
 
-  .main-content .partition-B img{
-    max-width: 100%;
-    height: 100%;
-  }
+.spacing-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 1rem auto 1rem 0;
+  line-height: 1.4;
+  max-width: 200px;
+  padding: 0 0.5rem 0 0;
+}
 
-  .card{
-    display: inline-block;
-    color: white;
-    background-color: inherit;
-    border-radius: 8px;
-    border: 1px solid grey;
-    min-width: 200px;
-    height: 100%;
-    /* padding: 1rem; */
-    padding-left: 8px;
-    font-weight: 400;
-    position: relative;
-    margin: 1.5rem;
-    line-height: 1.4;
-    overflow: visible;
-  }
-  
-  .main-content div.card img{
-    position: absolute;
-    z-index: 1;
-    top: -26px;
-    right: -20px;
-    width: 90px;
-    height: 90px;
-    line-height: 0;
-  }
-  
-  .quad-heading{
-    color: grey;
-    line-height: 1.4;
-    word-wrap: break-word;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: left;
-  }
-  
-  .card-text{
-    padding-top: 15px;
-    line-height: 1.5;
-    font-weight: 300;
-  }
+#price-1 {
+  display: inline-block;
+  color: white;
+  text-align: left;
+  font-weight: 600;
+}
 
-  .reviews {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 16px;
-      position: relative;
-  }
+#price-2 {
+  display: inline-block;
+  color: #99a99d;
+  text-align: right;
+  margin-right: 3rem;
+}
 
-  .reviews p {
-      display: inline-block;
-      margin: 0px 2px;
-      font-size: small;
-  }
+.primary-button {
+  color: white;
+  background-color: #c42844;
+  width: 80px;
+  min-height: 32px;
+  text-align: center;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px white;
+}
+
+.secondary-button {
+  color: white;
+  background-color: transparent;
+  width: 80px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid #99a99d;
+  border-radius: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.main-content .partition-B {
+  max-width: 50%;
+  height: auto;
+  text-align: center;
+  line-height: 0;
+  overflow: visible;
+}
+
+.main-content .partition-B img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: inline-block;
+  color: white;
+  background-color: inherit;
+  border-radius: 8px;
+  border: 1px solid grey;
+  min-width: 200px;
+  height: 100%;
+  /* padding: 1rem; */
+  padding-left: 8px;
+  font-weight: 400;
+  position: relative;
+  margin: 1.5rem;
+  line-height: 1.4;
+  overflow: visible;
+}
+
+.main-content div.card img {
+  position: absolute;
+  z-index: 1;
+  top: -26px;
+  right: -20px;
+  width: 90px;
+  height: 90px;
+  line-height: 0;
+}
+
+.quad-heading {
+  color: grey;
+  line-height: 1.4;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.card-text {
+  padding-top: 15px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+  position: relative;
+}
+
+.reviews p {
+  display: inline-block;
+  margin: 0px 2px;
+  font-size: small;
+}
 
 .add-to-cart {
-    color: white;
-    background-color: red;
-    position: absolute;
-    right: -8px;
-    bottom: -18px;
-    padding: 2px;
-    border-radius: 4px;
-    border-bottom-right-radius: 14px;
-    line-height: 0;
+  color: white;
+  background-color: red;
+  position: absolute;
+  right: -8px;
+  bottom: -18px;
+  padding: 2px;
+  border-radius: 4px;
+  border-bottom-right-radius: 14px;
+  line-height: 0;
 }
 
 .add-to-cart a {
@@ -404,7 +427,7 @@ input#search:focus {
 }
 
 /* Media Queries*/
-@media(max-width: 800px){
+@media (max-width: 800px) {
   .navbar .flex {
     justify-content: space-between;
   }
@@ -428,7 +451,7 @@ input#search:focus {
     align-items: center;
     margin: none;
     width: 90%;
-    height:max-content;
+    height: max-content;
     transition: all 0.4s ease;
   }
 
@@ -438,11 +461,11 @@ input#search:focus {
     flex-direction: column;
   }
 
-  .navbar .hamburger-menu-items .flex-buttons .inner-wrapper-search{
+  .navbar .hamburger-menu-items .flex-buttons .inner-wrapper-search {
     margin-top: inherit;
   }
 
-  .navbar .hamburger-menu-items .flex-buttons .cart{
+  .navbar .hamburger-menu-items .flex-buttons .cart {
     margin-top: inherit;
   }
 

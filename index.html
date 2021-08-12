@@ -15,7 +15,7 @@
         <a href="/">
           <h2 class="logo"><span>F</span>ood</h2>
         </a>
-        <a href="javascript:void(0);" class="hamburger-menu" onclick="myFunction()"><span
+        <a href="javascript:void(0);" class="hamburger-menu"><span
             class="material-icons-outlined">menu</span></a>
         <div class="hamburger-menu-items">
           <ul class="navigation">
@@ -27,14 +27,15 @@
           </ul>
           <div class="flex-buttons">
             <div class="inner-wrapper-search">
-              <span class="material-icons-outlined icon"> search </span>
+              <button id="search-button"><span class="material-icons-outlined icon"> search </span></button>
               <input type="text" id="search" name="search" placeholder="search" />
             </div>
             <div class="cart">
               <span class="badge">4</span>
-              <a href="cart.html" class="anchor-button">
+              <!-- <a href="cart.html" class="anchor-button">
                 <span class="material-icons-outlined">shopping_cart</span>
-              </a>
+              </a> -->
+              <button class="anchor-button" id="cart-button"><span class="material-icons-outlined">shopping_cart</span></button>
             </div>
           </div>
         </div>
@@ -147,6 +148,8 @@
     </section>
   </div>
   <script src="js/index.js"></script>
+  <script src="js/functions.js"></script>
+
 </body>
 
 </html>
