@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Search</title>
+</head>
+<body>
+    <script>
+        // debugger
+        const response = JSON.parse(sessionStorage.getItem('response'));
+        sessionStorage.removeItem('response');
+        response.meals.forEach(meal => {
+            const containerDiv_El = document.createElement('DIV');
+            const mealName_El = document.createElement('H1');
+            mealName_El.innerHTML = `Meal Name: ${meal.strMeal}`;
+            const mealCategory_El = document.createElement('P');
+            mealCategory_El.innerHTML = `Meal Category: ${meal.strCategory}`;
+            containerDiv_El.appendChild(mealName_El);
+            containerDiv_El.appendChild(mealCategory_El);
+            document.body.appendChild(containerDiv_El);
+        })
+    </script>
+</body>
+</html>
