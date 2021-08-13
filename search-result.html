@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/search-result.css" rel="stylesheet">
     <title>Food Order Search</title>
 </head>
 <body>
     <script>
         // debugger
         const response = JSON.parse(sessionStorage.getItem('response'));
-        sessionStorage.removeItem('response');
+        // sessionStorage.removeItem('response');
+        const gridDiv_El = document.createElement('DIV');
+        gridDiv_El.setAttribute('class', 'grid-box')
         response.meals.forEach(meal => {
             const containerDiv_El = document.createElement('DIV');
+            containerDiv_El.setAttribute('class', 'container');
             const mealName_El = document.createElement('H1');
             mealName_El.innerHTML = `Meal Name: ${meal.strMeal}`;
-            const mealCategory_El = document.createElement('P');
-            mealCategory_El.innerHTML = `Meal Category: ${meal.strCategory}`;
             containerDiv_El.appendChild(mealName_El);
-            containerDiv_El.appendChild(mealCategory_El);
-            document.body.appendChild(containerDiv_El);
-        })
+            gridDiv_El.appendChild(containerDiv_El);
+        });
+        document.body.appendChild(gridDiv_El);
     </script>
 </body>
 </html>

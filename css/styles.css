@@ -140,12 +140,6 @@ body .wrapper {
   position: relative;
 }
 
-/* .hamburger-menu-items .flex-buttons .inner-wrapper-search span.icon {
-  position: absolute;
-  top: 1.8px;
-  left: 1.8px;
-} */
-
 a.hamburger-menu {
   line-height: 0;
   color: white;
@@ -163,7 +157,7 @@ a.hamburger-menu {
   cursor: pointer;
   position: absolute;
   top: 2px;
-  left: 1.5px;
+  left: 124px;
   outline: none;
 }
 
@@ -171,6 +165,22 @@ a.hamburger-menu {
   line-height: 1;
   background-color: #333;
   border-radius: 2px solid white;
+}
+
+#category {
+  background-color: inherit;
+  color: white;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 12px;
+  height: 28px;
+  min-width: 118px;
+  line-height: 1;
+}
+
+#category option {
+  text-align: center;
+  background-color: inherit;
 }
 
 #search {
@@ -435,7 +445,8 @@ input#search:focus {
     position: fixed;
     z-index: 10;
     top: 105px;
-    width: 64%;
+    right: 0%;
+    width: 70%;
     height: auto;
     background-color: #99a99d;
     flex-direction: column-reverse;
@@ -471,6 +482,11 @@ input#search:focus {
 
   .navbar .hamburger-menu {
     display: inline-block;
+  }
+
+  #search-button {
+    top: 30px;
+    left: 45px;
   }
 
   .main-content {
