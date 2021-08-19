@@ -1,5 +1,4 @@
 async function searchMealByName(searchQuery, categoryValue) {
-  debugger;
   try {
     if (searchQuery.length !== 0 && categoryValue === 'All') {
       const response = await newAxios.get('/search.php', {
