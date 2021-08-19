@@ -4,7 +4,11 @@ const newAxios = axios.create({
 
 document.querySelector('.hamburger-menu').addEventListener('click', (event) => {
     const hamburgerMenuItems_El = document.querySelector('.hamburger-menu-items');
-    hamburgerMenuItems_El.classList.toggle('show');
+    if (hamburgerMenuItems_El.style.display == 'none') {
+        hamburgerMenuItems_El.style.display = 'flex';
+    } else {
+        hamburgerMenuItems_El.style.display = 'none';
+    }
 });
 
 

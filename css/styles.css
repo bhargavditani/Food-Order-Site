@@ -458,12 +458,10 @@ input#search:focus {
     justify-content: space-around;
     align-items: center;
     overflow: auto;
-    /* display: none; */
-    right: -100%;
+    display: none;
+    /* right: -100%; */
   }
-  .navbar div.hamburger-menu-items.show {
-    right:0;
-  }
+ 
   .navbar .hamburger-menu-items ul.navigation {
     flex-direction: column;
     flex-wrap: nowrap;
