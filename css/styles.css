@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 
 body {
@@ -12,10 +13,12 @@ body {
   color: whitesmoke;
   line-height: 1.6;
   background-color: #333;
+  margin: 1px;
   background-image: url("../images/bg-image.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto auto;
   background-attachment: fixed;
+  /* overflow: hidden; */
 }
 
 ul {
@@ -380,8 +383,10 @@ input#search:focus {
 .main-content div.card img {
   position: absolute;
   z-index: 1;
-  top: -26px;
-  right: -20px;
+  /* top: -26px;
+  right: -20px; */
+  top: 0;
+  right: 0;
   width: 90px;
   height: 90px;
   line-height: 0;
@@ -489,8 +494,8 @@ input#search:focus {
   }
 
   #search-button {
-    top: 30px;
-    left: 45px;
+    top: 4px;
+    left: 124px;
   }
 
   .main-content {
