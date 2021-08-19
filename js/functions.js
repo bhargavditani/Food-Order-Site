@@ -1,23 +1,28 @@
-async function searchMealByName_function(searchQuery_string, categoryValue) {
+async function searchMealByName(searchQuery, categoryValue) {
+  debugger;
   try {
-    if (searchQuery_string.length !== 0 && categoryValue === 'All') {
-      const response = await fetch(`https://themealdb.com/api/json/v1/1/search.php?s=${searchQuery_string}`);
+    if (searchQuery.length !== 0 && categoryValue === 'All') {
+      const response = await newAxios.get('/search.php', {
+        params : { s: `${searchQuery}`}
+      });
       if (response.status === 200) {
-        return await response.json();
+        return response.data;
       } else {
         throw new Error('Something Went Wrong');
       }
-    } else if (searchQuery_string.length !== 0 && categoryValue !== 'All') {
-        const response = await fetch(`https://themealdb.com/api/json/v1/1/filter.php?c=${categoryValue}`);
+    } else if (searchQuery.length !== 0 && categoryValue !== 'All') {
+        const response = await newAxios.get('/filter.php', {params: {c:`${categoryValue}`}});
         if (response.status === 200) {
-          return await response.json();
+          return response.data;
         } else {
           throw new Error('Something Went Wrong');
         }
-    } else if (searchQuery_string.length === 0 && categoryValue !== 'All') {
-        const response = await fetch(`https://themealdb.com/api/json/v1/1/filter.php?c=${categoryValue}`,);
+    } else if (searchQuery.length === 0 && categoryValue !== 'All') {
+        const response = await newAxios('/filter.php', {
+          params: {c: `${categoryValue}`}
+        });
         if (response.status === 200) {
-          return await response.json();
+          return response.data;
         } else {
           throw new Error('Something Went Wrong');
         }
@@ -29,7 +34,7 @@ async function searchMealByName_function(searchQuery_string, categoryValue) {
   }//catch closed
 }
 
-async function mealByNameData_function(response, searchQuery_string, categoryValue) {
+async function mealByNameData(response, searchQuery, categoryValue) {
   let result;
   const inputField = document.querySelector('#search');
   if (response.meals !== null) {
@@ -38,13 +43,12 @@ async function mealByNameData_function(response, searchQuery_string, categoryVal
       inputField.value = '';
       location.assign('../search-result.html');
     } else {
-      result = response.meals.filter(meal => meal.strMeal.toLowerCase().includes(searchQuery_string));
+      result = response.meals.filter(meal => meal.strMeal.toLowerCase().includes(searchQuery));
       if (result.length) {
         sessionStorage.setItem('response', JSON.stringify({meals: result}));
         inputField.value = '';
         location.assign('../search-result.html');
-      }
-      else {
+      } else {
         throw new Error('Nothing Found!')
       }
     }
